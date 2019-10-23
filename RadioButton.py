@@ -1,0 +1,23 @@
+from tkinter import *
+import tkinter.messagebox as tmsg
+root=Tk()
+root.geometry("400x200")
+root.title("Radio button tutorial")
+def hobby():
+    print("hobby",f"Your Hobby is {var.get()}")
+    tmsg.showinfo("hobby",f"Your Hobby is {var.get()}")
+var=StringVar()
+var.set("Sumeet")
+l1=Label(root, text="What is your hobby?",font="lucida 19 bold",padx=15)
+l1.pack()
+radio=Radiobutton(root,text="Swimming",padx=15,value="Swimming",variable=var)
+radio.pack(anchor=W,padx=57)
+radio=Radiobutton(root,text="Dancing",padx=15,value="Dancing",variable=var)
+radio.pack(anchor=W,padx=57)
+radio=Radiobutton(root,text="Sports",padx=15,value="Sports",variable=var)
+radio.pack(anchor=W,padx=57)
+radio=Radiobutton(root,text="Singing",padx=15,value="Singing",variable=var)
+radio.pack(anchor=W,padx=57)
+b1=Button(root, text="Hobby",command=hobby)
+b1.pack()
+root.mainloop()
